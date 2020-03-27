@@ -11,10 +11,10 @@ export default class MeasureRender extends React.Component {
     const name = this.props.name;
     if (this.mounted) {
       //window.performance.mark(`${name}UpdateStart`);
-      performance.mark(`${name}UpdateStart`);
+      //performance.mark(`${name}UpdateStart`);
     } else {
       //window.performance.mark(`${name}MountStart`);
-      performance.mark(`${name}MountStart`);
+      //performance.mark(`${name}MountStart`);
     }
     return this.props.children;
   }
