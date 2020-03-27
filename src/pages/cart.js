@@ -5,6 +5,7 @@ import CartItemList from '../components/CartItemList'
 import CartSummary from '../components/CartSummary'
 import CartContext from '../components/Context/CartContext'
 import Layout from '../components/Layout'
+import MeasureRender from './MeasureRender';
 
 const Moltin = require('../../lib/moltin')
 
@@ -83,6 +84,7 @@ const Cart = ({location}) => {
   const rest = {completed, items, loading, cartId}
 
   return (
+   <MeasureRender name="Cart"> 
     <Layout location={location}>
       <SEO title="Cart" />
       <CartItemList
@@ -93,6 +95,7 @@ const Cart = ({location}) => {
         <CartSummary {...meta} handleCheckout={handleCheckout} />
       )}
     </Layout>
+  </MeasureRender>
   )
 }
 
