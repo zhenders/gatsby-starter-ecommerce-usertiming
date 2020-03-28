@@ -38,6 +38,7 @@ const DesktopMenu = ({location: {pathname}, token, cartCount, signout}) => {
               as={Link}
               to="/cart/"
               active={activeItem === withPrefix('/cart/')}
+              onClick=performance.mark(`CartMountStart`);
             >
               <ShoppingCartIcon cartCount={cartCount} name="Cart" />
             </Menu.Item>
